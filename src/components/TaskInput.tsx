@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 
+import { validateAndPrepareTaskText } from "../utils/taskUtils";
+
 interface TaskInputProps {
   onAddTask: (text: string) => void;
 }
 
 const TaskInput: React.FC<TaskInputProps> = ({ onAddTask }) => {
-  const EMPTY_STRING = "";
   const [taskText, setTaskText] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const trimmedText = taskText.trim();
-    if (trimmedText === EMPTY_STRING) {
-      return;
-    }
+    const validText = validateAndPrepareTaskText(taskText);
+    if (!validText) return;
 
-    onAddTask(trimmedText);
+    onAddTask(validText);
 
     setTaskText("");
   };
