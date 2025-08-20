@@ -31,6 +31,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
           checked={task.completed}
           onChange={handleToggle}
           className='task-item-checkbox'
+          tabIndex={0}
         />
         <span className='task-item-text'>{task.text}</span>
       </label>
@@ -40,6 +41,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
         className='task-item-delete'
         aria-label={`Delete task: ${task.text}`}
         type='button'
+        tabIndex={0}
       >
         ×
       </button>

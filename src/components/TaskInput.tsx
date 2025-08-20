@@ -43,6 +43,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ onAddTask }) => {
           type='submit'
           className='task-input-button'
           aria-label='Add task'
+          tabIndex={0}
         >
           Add
         </button>
