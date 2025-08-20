@@ -6,7 +6,7 @@ A minimal client-side to-do application built with React demonstrating fundament
 
 ### Prerequisites
 
-- **Node.js**: v22.15.0
+- **Node.js**: v22.15.0 (or compatible version)
 - **npm**: 10.9.2
 
 ### To Run App
@@ -30,8 +30,6 @@ npm run test
 
 ## Project Decisions
 
-- Chose Create React App for rapid development setup and zero-configuration TypeScript support
-- Used TypeScript for type safety and better developer experience throughout the application
+- Followed suggested component structure from requirements (Header, TaskInput, TaskList, TaskItem)
 - Implemented minimal CSS without external libraries per requirements to keep dependencies light
 - Used Date.now() for task IDs (acceptable for demo purposes, would use UUID library in production)
-- Followed suggested component structure from requirements (Header, TaskInput, TaskList, TaskItem)

@@ -12,6 +12,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ onAddTask }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // isolate this logic for unit testing
     const validText = validateAndPrepareTaskText(taskText);
     if (!validText) return;
 
