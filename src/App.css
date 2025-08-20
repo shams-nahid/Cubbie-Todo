@@ -9,6 +9,12 @@
   padding: 1rem;
 }
 
+.task-count {
+  color: dimgray;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .task-input {
   margin-bottom: 2rem;
 }

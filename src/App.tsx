@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const remainingCount = tasks.filter(task => !task.completed).length;
 
   const handleAddTask = (text: string) => {
     const newTask: Task = {
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
+      <Header remainingCount={remainingCount} />
       <TaskInput onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}
