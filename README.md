@@ -13,7 +13,7 @@ A minimal client-side to-do application built with React demonstrating fundament
 
 ```bash
 npm install
-npm run dev
+npm start
 ```
 
 The app will automatically open in your browser at `http://localhost:3000`.
