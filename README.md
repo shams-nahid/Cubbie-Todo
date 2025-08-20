@@ -1,31 +1,31 @@
-# To-Do App
+# React To-Do App
 
-A minimal React to-do application demonstrating core React fundamentals.
+A minimal client-side to-do application built with React demonstrating fundamental React concepts.
 
-## Features
+## How to Run Locally
 
-- Add tasks (Enter key or Add button)
-- Toggle task completion with checkbox
-- Delete tasks with × button
-- Clean, responsive design
-- Full keyboard accessibility
-
-## Prerequisites
+### Prerequisites
 
 - **Node.js**: v22.15.0
 - **npm**: 10.9.2
 
-## Tech Stack
-
-- **React 18** with TypeScript
-- **Create React App** for build tooling
-- **CSS** for styling (no external UI libraries)
-
-## Getting Started
+### To Run Locally
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-Opens [http://localhost:3000](http://localhost:3000) in your browser.
+The app will automatically open in your browser at `http://localhost:3000`.
+
+## React + Tooling Choice
+
+**Create React App** - Chosen for rapid development setup and built-in TypeScript support.
+
+## Project Decisions
+
+- Chose Create React App for rapid development setup and zero-configuration TypeScript support
+- Used TypeScript for type safety and better developer experience throughout the application
+- Implemented minimal CSS without external libraries per requirements to keep dependencies light
+- Used Date.now() for task IDs (acceptable for demo purposes, would use UUID library in production)
+- Followed suggested component structure from requirements (Header, TaskInput, TaskList, TaskItem)

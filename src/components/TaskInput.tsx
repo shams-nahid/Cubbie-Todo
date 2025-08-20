@@ -5,35 +5,36 @@ interface TaskInputProps {
 }
 
 const TaskInput: React.FC<TaskInputProps> = ({ onAddTask }) => {
-  const [inputValue, setInputValue] = useState("");
+  const EMPTY_STRING = "";
+  const [taskText, setTaskText] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const trimmedText = inputValue.trim();
-    if (trimmedText === "") {
+    const trimmedText = taskText.trim();
+    if (trimmedText === EMPTY_STRING) {
       return;
     }
 
     onAddTask(trimmedText);
 
-    setInputValue("");
+    setTaskText("");
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+    setTaskText(e.target.value);
   };
 
   return (
     <form className='task-input' onSubmit={handleSubmit}>
-      <label htmlFor='task-input-field' className='task-input-label'>
+      <label htmlFor='task-input-field' className='sr-only'>
         Add a new task
       </label>
       <div className='task-input-row'>
         <input
           id='task-input-field'
           type='text'
-          value={inputValue}
+          value={taskText}
           onChange={handleInputChange}
           placeholder='Add a task…'
           className='task-input-field'

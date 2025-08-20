@@ -1,7 +1,7 @@
 .App {
-  max-width: 600px;
+  max-width: 35rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .header {
@@ -13,7 +13,7 @@
   margin-bottom: 2rem;
 }
 
-.task-input-label {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,7 +33,7 @@
 .task-input-field {
   flex: 1;
   padding: 1rem;
-  border: 1px solid grey;
+  border: 1px solid dimgray;
 }
 
 .task-input-button {
@@ -44,7 +44,8 @@
   cursor: pointer;
 }
 
-.task-input-button:hover {
+.task-input-button:hover,
+.task-input-button:focus {
   background-color: #0056b3;
 }
 
@@ -63,7 +64,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid grey;
+  border: 1px solid dimgray;
   margin: 1rem 0;
 }
 

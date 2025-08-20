@@ -20,8 +20,12 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
     <div
       className={`task-item ${task.completed ? "task-item--completed" : ""}`}
     >
-      <label className='task-item-checkbox-label'>
+      <label
+        className='task-item-checkbox-label'
+        htmlFor={`checkbox-${task.id}`}
+      >
         <input
+          id={`checkbox-${task.id}`}
           type='checkbox'
           checked={task.completed}
           onChange={handleToggle}
