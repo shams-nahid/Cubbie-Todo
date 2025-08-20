@@ -9,7 +9,7 @@ A minimal client-side to-do application built with React demonstrating fundament
 - **Node.js**: v22.15.0
 - **npm**: 10.9.2
 
-### To Run Locally
+### To Run App
 
 ```bash
 npm install
@@ -17,6 +17,12 @@ npm start
 ```
 
 The app will automatically open in your browser at `http://localhost:3000`.
+
+### To Run Test
+
+```bash
+npm run test
+```
 
 ## React + Tooling Choice
 
