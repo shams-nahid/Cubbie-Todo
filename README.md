@@ -33,3 +33,5 @@ npm run test
 - Followed suggested component structure from requirements (Header, TaskInput, TaskList, TaskItem)
 - Implemented minimal CSS without external libraries per requirements to keep dependencies light
 - Used Date.now() for task IDs (acceptable for demo purposes, would use UUID library in production)
+- Selected TypeScript over JavaScript for better type safety and development experience
+- Implemented unit tests for utility functions to demonstrate testing approach while keeping test suite lightweight per requirements
